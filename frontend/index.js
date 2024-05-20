@@ -12,6 +12,7 @@ function moduleProject1() {
   widgets.forEach(widget => {
     widget.classList.add('widget')
   })
+  
   // 👉 TASK 2 - Build a "Quote of the Day" widget
   //  ✨ add your code here
 
