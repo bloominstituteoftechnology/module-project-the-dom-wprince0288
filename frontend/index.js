@@ -8,8 +8,9 @@ function moduleProject1() {
   // 👉 TASK 1 - Add a "widget" class name to widgets so CSS kicks in
   //  ✨ add your code here
   const widgets = document.querySelectorAll('section>div')
-  widgets.forEach(widget => {
+  widgets.forEach((widget, idx) => {
     widget.classList.add('widget')
+    widget.setAttribute('tabindex', idx + 1)
   })
 
   // 👉 TASK 2 - Build a "Quote of the Day" widget
@@ -80,7 +81,6 @@ function moduleProject1() {
       const friendId = person.friends[idx]
       const friend = people.find(p => p.id === friendId)
       const fullName = `${friend.fname} ${friend.lname}`
-      console.log(fullName)
       let isLastIdx = idx === person.friends.length - 1
       let isNextToLastIdx = idx === person.friends.length - 2
       if (isLastIdx) {
@@ -94,9 +94,11 @@ function moduleProject1() {
   }
   personParagraph.textContent = sentence
 
- 
+
   // 👉 TASK 6 - Make it so user can tab through the widgets
   //  ✨ add your code here
+
+
 
   // 👆 WORK WORK ABOVE THIS LINE 👆
 }
